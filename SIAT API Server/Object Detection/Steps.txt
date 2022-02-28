@@ -1,0 +1,53 @@
+Open Anaconda prompt 
+activate PythonGPU
+cd.. cd.. cd.. 
+cd E:\Research_Paper\SIAT\PythonAPI
+E:
+spyder
+python server.py
+run client.py
+
+python car_counter_yolov3_COCO_6_classes.py -y yolo --input videos/10fps.mp4 --output output --skip-frames 5
+
+Object Detection SSD_object_detection.py
+1. Install Anaconda (Python 3.7 64-Bit Graphical Installer (466 MB))
+https://www.anaconda.com/products/individual#download-section 
+https://towardsdatascience.com/installing-keras-tensorflow-using-anaconda-for-machine-learning-44ab28ff39cb
+Open Anaconda prompt
+2. check python version 
+python 
+(3.7.7)
+3. Create a new conda environment where we will install our modules
+conda create --name PythonGPU
+check python version 
+python 
+(3.7.7) if python not found then
+conda install python=3.7.7
+
+4. conda install spyder
+5. conda install -c conda-forge opencv=4.2.0
+6. conda install -c conda-forge imutils
+7. conda install -c anaconda pip  (optional)
+8. pip install opencv-contrib-python (optional)
+9. conda install -c anaconda cudatoolkit (optional)
+
+Open Another anaconda prompt 
+1. conda activate PythonGPU
+2. cd E:\Research_Paper\SIAT\PythonAPI 
+3. goto the code file using cd
+4. Run
+python ssd_object_detection.py --prototxt MobileNetSSD_deploy.prototxt --model MobileNetSSD_deploy.caffemodel --input ../example_videos/guitar.mp4 --output ../output_videos/ssd_guitar.avi --display 1 --use-gpu 1
+
+
+set FLASK_APP=server.py
+set FLASK_ENV=development
+flask run
+or,
+python server.py
+
+
+set FLASK_APP=ObjectDetectionDeepLearnedSSD.py
+set FLASK_ENV=development
+flask run 
+or,
+python ObjectDetectionDeepLearnedSSD.py

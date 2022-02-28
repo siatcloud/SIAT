@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Action Recognition</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-4">Action Recognition API</h1>
+        <p class="lead">
+            A testbid client for Action Recognition API
+        </p>
+        <hr class="my-4" />
+        <h4>Input example</h4>
+        <p>
+            1
+            <br />
+            72057594037944072 0 1 1 0 0 0 0.2843691 -0.266589 2
+            <br />
+            25
+            <br />
+            -0.3047664 0.01697786 3.112059 226.7646 207.7471 868.6228 533.8389 0.01251847 0.02120546 0.9920653 -0.1232886 2
+            <br />
+            -0.2919551 0.2917791 3.042816 227.463 174.6873 870.7773 437.907 0.03301489 0.01865342 0.9915949 -0.1237004 2
+            <br />
+            ...
+        </p>
+        <h4>Evaluation examples</h4>
+        <p>
+          <ul class="list-inline">
+              <li class="list-inline-item"><a href="{% url 'ntu_ar' %}?data=S001C003P008R001A001.skeleton" target="_blank">Example 1</a></li>
+              <li class="list-inline-item"><a href="{% url 'ntu_ar' %}?data=S001C003P008R001A007.skeleton" target="_blank">Example 2</a></li>
+              <li class="list-inline-item"><a href="{% url 'ntu_ar' %}?data=S001C003P008R001A013.skeleton" target="_blank">Example 3</a></li>
+              <li class="list-inline-item"><a href="{% url 'ntu_ar' %}?data=S001C003P008R001A019.skeleton" target="_blank">Example 4</a></li>
+              <li class="list-inline-item"><a href="{% url 'ntu_ar' %}?data=S001C003P008R001A025.skeleton" target="_blank">Example 5</a></li>
+          </ul>
+        </p>
+        <h4>Output examples</h4>
+        <p> 
+            <dl class="row">
+                <dt class="col-sm-2 text-success">Success</dt>
+                <dd class="col-sm-10"><samp>{"status": 0, "message": "successful", "predict_value": [1], "predict_label": [1]}</samp></dd>
+                <dt class="col-sm-2 text-danger">Failure</dt>
+                <dd class="col-sm-10"><samp>{"status": 1, "message": "CUDA error: invalid device ordinal", "predict_value": [], "predict_label": []}</samp></dd>
+            </dl>
+        </p>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+  </body>
+</html>

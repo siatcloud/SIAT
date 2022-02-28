@@ -1,0 +1,25 @@
+conda create -n conda_py37 python=3.7
+
+conda install -c conda-forge opencv=4.2.0
+
+
+conda install -c conda-forge imutils
+
+conda install -c anaconda keras-gpu=2.2.4
+
+conda install -c conda-forge matplotlib
+
+conda install -c anaconda pandas
+
+conda install -c anaconda seaborn
+
+conda install -c anaconda scikit-learn
+
+
+conda install -c anaconda flask
+
+conda install -c conda-forge flask-restful
+
+conda install -c anaconda markupsafe
+
+conda install -c anaconda requests

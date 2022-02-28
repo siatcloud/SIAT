@@ -1,0 +1,31 @@
+Python and Flask Rest API
+
+Pip
+1.	pip install Flask
+2.	pip install Flask-RESTful
+3.	pip install MarkupSafe
+
+Conda
+1.	conda install -c anaconda flask
+2.	conda install -c conda-forge flask-restful
+3.	conda install -c anaconda markupsafe
+
+
+Run Flask
+1.  set FLASK_APP=hello.py
+2.  set FLASK_ENV=development
+3.  flask run
+
+
+or
+python hello.py
+
+
+
+Change host name and debug true
+app.run(debug=True, host='163.180.116.64')
+
+
+post call:
+curl host_url -d "task=something new" -X POST -v
+curl http://163.180.116.64:5000/ -d "data_path=data/test/1.mp4" -X POST -v
